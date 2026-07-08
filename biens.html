@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nos biens immobiliers - Nova Estate</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="bg-gray-50">
+        <nav class="max-w-7xl mx-auto flex justify-between items-center p-5">
+            <div class="flex items-center gap-2">
+                <img src="LOGO/image.png" alt="Logo" class="w-18 h-16">
+                <h1 class="text-3xl font-bold text-blue-900">Nova Estate</h1>
+            </div>
+        </nav>
+        <section class="text-center py-16">
+            <h2 class="text-5xl font-bold text-blue-900">Nos biens immobiliers</h2>
+            <p class="text-xl text-yellow-600 mt-4 font-semibold">Trouvez la propriété idéale qui correspond à vos besoins</p>
+            <p class="text-gray-600 mt-5 max-w-3xl mx-auto">
+                Découvrez notre sélection de maisons, appartements,
+                terrains et locaux commerciaux disponibles à la vente
+                ou à la location.
+            </p>
+        </section>
+        <section class="max-w-7xl mx-auto">
+            <div class="flex justify-center gap-4 flex-wrap">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="maison">Maisons</button>
+                <button class="filter-btn" data-filter="appartement">Appartements</button>
+                <button class="filter-btn" data-filter="terrain">Terrains</button>
+                <button class="filter-btn" data-filter="commercial">Commerciaux</button>
+            </div>
+        </section>
+        <section class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8 py-16">
+            <div class="property maison bg-white rounded-xl shadow-lg overflow-hidden">
+                <img src="villas/villaM.webp" class="w-full h-60 object-cover" title="maison à vendre">
+                <div class="p-5">
+                    <span class="badge">À vendre</span>
+                    <h3 class="text-2xl font-bold text-blue-900 mt-4">Villa Moderne</h3>
+                    <p class="text-gray-600 mt-2">La Marsa, Tunis</p>
+                    <h4 class="text-xl font-bold text-yellow-600 mt-3">950 000 DT</h4>
+                    <p class="mt-3">
+                        Surface : 250 m² <br>
+                        Pièces : 5 <br>
+                        Chambres : 3
+                    </p>
+                    <button class="details-btn mt-5">Voir détails</button>
+                </div>
+            </div>
+            <div class="property appartement bg-white rounded-xl shadow-lg overflow-hidden">
+                <img src="villas/appartement.webp" class="w-full h-60 object-cover" title="maison à louer">
+                <div class="p-5">
+                    <span class="badge">À louer</span>
+                    <h3 class="text-2xl font-bold text-blue-900 mt-4">Appartement Luxe</h3>
+                    <p class="text-gray-600 mt-2">Centre Urbain Nord</p>
+                    <h4 class="text-xl font-bold text-yellow-600 mt-3">1800 DT / mois</h4>
+                    <p>
+                        Surface : 120 m² <br>
+                        Pièces : 4 <br>
+                        Chambres : 5
+                    </p>
+                    <button class="details-btn mt-5">Voir détails</button>
+                </div>
+            </div>
+            <div class="property maison bg-white rounded-xl shadow-lg overflow-hidden">
+                <img src="villas/maisonF.webp" class="w-full h-60 object-cover" title="maison à vendre">
+                <div class="p-5">
+                    <span class="badge">À vendre</span>
+                    <h3 class="text-2xl font-bold text-blue-900 mt-4">Maison Familiale</h3>
+                    <p>Zarzis</p>
+                    <h4 class="text-xl font-bold text-yellow-600">650 000 DT</h4>
+                    <p>
+                        Surface : 180 m² <br>
+                        Pièces : 4 <br>
+                        Chambres : 3
+                    </p>
+                    <button class="details-btn">Voir détails</button>
+                </div>
+            </div>
+            <div class="property terrain bg-white rounded-xl shadow-lg overflow-hidden">
+                <img src="villas/terrain.webp" class="w-full h-60 object-cover" title="maison à vendre">
+                <div class="p-5">
+                    <span class="badge">À vendre</span>
+                    <h3 class="text-2xl font-bold text-blue-900">Terrain Constructible</h3>
+                    <p>Hammamet</p>
+                    <h4 class="text-xl font-bold text-yellow-600">300 000 DT</h4>
+                    <p>
+                        Surface : 500 m² <br>
+                        Pièces : 3 <br>
+                        Chambres : 4
+                    </p>
+                    <button class="details-btn">Voir détails</button>
+                </div>
+            </div>
+            <div class="property commercial bg-white rounded-xl shadow-lg overflow-hidden">
+                <img src="villas/local commercial.webp" class="w-full h-60 object-cover" title="maison à louer">
+                <div class="p-5">
+                    <span class="badge">À louer</span>
+                    <h3 class="text-2xl font-bold text-blue-900">Local Commercial</h3>
+                    <p>Tunis Centre</p>
+                    <h4 class="text-xl font-bold text-yellow-600">2500 DT / mois</h4>
+                    <p>
+                        Surface : 90 m² <br>
+                        Pièces : 3 <br>
+                        Chambres : 5
+                    </p>
+                    <button class="details-btn">Voir détails</button>
+                </div>
+            </div>
+            <div class="property appartement bg-white rounded-xl shadow-lg overflow-hidden">
+                <img src="villas/vue mer.webp" class="w-full h-60 object-cover" title="maison à vendre">
+                <div class="p-5">
+                    <span class="badge">À vendre</span>
+                    <h3 class="text-2xl font-bold text-blue-900">Appartement Vue Mer</h3>
+                    <p>Sfax</p>
+                    <h4 class="text-xl font-bold text-yellow-600">780 000 DT</h4>
+                    <p>
+                        Surface : 160 m² <br>
+                        Pièces : 5 <br>
+                        Chambres : 3
+                    </p>
+                    <button class="details-btn">Voir détails</button>
+                </div>
+            </div>
+        </section>
+        <script src="biens.js"></script>
+    </body>
+</html>
