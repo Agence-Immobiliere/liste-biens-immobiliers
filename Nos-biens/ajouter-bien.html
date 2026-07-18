@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ajouter un bien - Nova Estate</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-gray-100">
+        <nav class="bg-white shadow-md p-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="LOGO/image.png" alt="Logo" class="w-14">
+                <h1 class="text-2xl font-bold text-blue-900">Nova Estate</h1>
+            </div>
+            <ul class="flex gap-6 font-semibold">
+                <li><a href="/Accueil/index.html">Accueil</a></li>
+                <li><a href="apropos.html">À propos</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="biens.html">Nos biens</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <section class="max-w-4xl mx-auto bg-white mt-10 p-8 rounded-xl shadow-lg">
+            <h2 class="text-3xl font-bold text-center text-blue-900 mb-8">Ajouter un bien immobilier</h2>
+            <form>
+                <div class="grid grid-cols-2 gap-6">
+                    <div>
+                        <label>Titre du bien</label>
+                        <input type="text" placeholder="Villa Moderne" class="w-full border rounded-lg p-3 mt-2">
+                    </div>
+                    <div>
+                        <label for="Type">Type</label>
+                        <select id="Type" class="w-full border rounded-lg p-3 mt-2">
+                            <option>Maison</option>
+                            <option>Appartement</option>
+                            <option>Terrain</option>
+                            <option>Commercial</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="Statut">Statut</label>
+                        <select id="Statut" class="w-full border rounded-lg p-3 mt-2">
+                            <option>À vendre</option>
+                            <option>À louer</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Prix</label>
+                        <input type="number"  placeholder="250000" class="w-full border rounded-lg p-3 mt-2">
+                    </div>
+                    <div>
+                        <label>Localisation</label>
+                        <input type="text" placeholder="Tunis" class="w-full border rounded-lg p-3 mt-2">
+                    </div>
+                    <div>
+                        <label>Surface (m²)</label>
+                        <input type="number" placeholder="180" class="w-full border rounded-lg p-3 mt-2">
+                    </div>
+                    <div>
+                        <label>Pièces</label>
+                        <input type="number" placeholder="5" class="w-full border rounded-lg p-3 mt-2">
+                    </div>
+                    <div>
+                        <label>Chambres</label>
+                        <input type="number" placeholder="3" class="w-full border rounded-lg p-3 mt-2">
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <label for="Image">Image du bien</label>
+                    <input type="file" id="Image" class="w-full border rounded-lg p-3 mt-2">
+                </div>
+                <div class="mt-6">
+                    <label>Description</label>
+                    <textarea rows="5" placeholder="Décrivez votre bien..." class="w-full border rounded-lg p-3 mt-2"></textarea>
+                </div>
+                <div class="mt-8 flex justify-center gap-5">
+                    <button type="submit" class="bg-yellow-500 text-white px-8 py-3 rounded-lg hover:bg-yellow-600">
+                        Enregistrer
+                    </button>
+                    <button type="reset" class="bg-red-500 text-white px-8 py-3 rounded-lg hover:bg-red-600">
+                        Annuler
+                    </button>
+                </div>
+            </form>
+        </section>
+        <script src="ajouter-bien.js"></script>
+    </body>
+</html>

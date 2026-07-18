@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Détails du Bien - Nova Estate</title>
+        <link rel="stylesheet" href="bienIM.css">
+    </head>
+    <body>
+        <div class="breadcrumb">
+            <a href="/Accueil/index.html">Accueil</a> <span class="separator">&rsaquo;</span>
+            <a href="/Nos-biens/biens.html">Nos biens</a> <span class="separator">&rsaquo;</span>
+            <span id="bread-title" class="current-page">Détail du bien</span>
+        </div>
+        <div class="contenu-principal">
+            <div class="images-section">
+                <img id="main-img" src="" class="image-grande">
+                <div class="images-petites">
+                    <img id="thumb1" src="" onmouseover="changerImage(this.src)">
+                    <img id="thumb2" src="" onmouseover="changerImage(this.src)">
+                    <img id="thumb3" src="" onmouseover="changerImage(this.src)">
+                </div>
+            </div>
+            <div class="infos-section">
+                <div class="en-tete">
+                    <div>
+                        <h1 id="prop-title" style="display: inline-block; margin-right: 10px;"></h1>
+                        <span id="prop-transaction" class="badge-transaction"></span>
+                    </div>
+                    <div id="prop-etat"></div>
+                </div>
+                <h2 id="prop-price"></h2>
+                <div class="contact-agent">
+                    <p><strong>Agent responsable :</strong> <span id="seller-name"></span></p>
+                    <p><strong>Téléphone :</strong> <span id="seller-phone"></span></p>
+                    <p><strong>Email :</strong> <span id="seller-email"></span></p>
+                </div>
+                <h3>Description détaillée :</h3>
+                <p id="prop-desc"></p>
+                <h3>Caractéristiques et Détails Techniques :</h3>
+                <ul class="details-techniques">
+                    <li><strong>Surface :</strong> <span id="prop-surface"></span></li>
+                    <li><strong>Pièces :</strong> <span id="prop-pieces"></span></li>
+                    <li><strong>Étage :</strong> <span id="prop-etage"></span></li>
+                    <li><strong>Année de construction :</strong> <span id="prop-annee"></span></li>
+                </ul>
+                <h3>Équipements supplémentaires :</h3>
+                <ul id="prop-equipements" class="liste-equipements"></ul>
+                <h3>Localisation complète :</h3>
+                <p id="prop-localisation" class="localisation-texte"></p>
+                <h3>Contacter l'agent pour ce bien :</h3>
+                <form class="formulaire-contact" id="contact-form">
+                    <div class="form-row">
+                        <input type="text" id="nom" placeholder="Nom" required>
+                        <input type="text" id="prenom" placeholder="Prénom" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="email" id="email" placeholder="Adresse e-mail" required>
+                        <input type="tel" id="telephone" placeholder="Téléphone" required>
+                    </div>
+                    <select id="service" required>
+                        <option value="">Sélectionnez le service concerné</option>
+                        <option value="visite">Demande de visite</option>
+                        <option value="info">Demande d'informations</option>
+                        <option value="achat">Proposition d'achat</option>
+                    </select>
+                    <textarea id="message" rows="4" placeholder="Votre message" required></textarea>
+                    <button type="button" class="btn-acheter" onclick="contacterAgent()">Contacter l'agent</button>
+                </form>
+            </div>
+        </div>
+        <div class="section-similaires">
+            <h3>Biens similaires recommandés</h3>
+            <div class="cartes-similaires" id="similaires-container"></div>
+        </div>
+        <script src="bienIM.js"></script>
+    </body>
+</html>
