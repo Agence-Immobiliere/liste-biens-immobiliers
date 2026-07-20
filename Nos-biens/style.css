@@ -275,10 +275,10 @@ section p{
     transition: .3s;
 }
 .btn-save:hover{
-    background: #b8922d;
+    background: #D4AF37;
 }
 .btn-cancel{
-    background: #dc3545;
+    background: #1e3a8a;
     color: white;
     border: none;
     padding: 12px 25px;
@@ -290,5 +290,5 @@ section p{
     margin-left: 10px;
 }
 .btn-cancel:hover{
-    background: #b52a37;
+    background: #1e3a8a;
 }
