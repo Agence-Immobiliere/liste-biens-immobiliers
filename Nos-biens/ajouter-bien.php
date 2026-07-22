@@ -16,11 +16,12 @@
                 </div>
                 <nav>
                     <ul class="flex gap-8 text-white font-semibold">
-                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="../Accueil/index.html">Accueil</a></li>
                         <li><a href="apropos.html">À propos</a></li>
                         <li><a href="services.html">Services</a></li>
-                        <li><a href="biens.html">Nos biens</a></li>
+                        <li><a href="../Nos-biens/biens.html">Nos biens</a></li>
                         <li><a href="contact.html">Contact</a></li>
+                        <li><a href="../FAQ/faq.html">FAQ</a></li>
                     </ul>
                 </nav>
             </div>
