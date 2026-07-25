@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails du Bien - Nova Estate</title>
+    <!-- Nova Estate Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bienIM.css">
+</head>
+<body>
+
+    <div class="breadcrumb">
+        <a href="#"><img src="NOVA-ESTATE-IMAGES/ÉLÉMENTS-STATIQUES/icons/icon-house.svg" class="icon-sm" alt="Accueil"> Accueil</a> 
+        <span class="separator">&rsaquo;</span>
+        <a href="#">Nos biens</a>
+        <span class="separator">&rsaquo;</span>
+        <span id="bread-title" class="current-page">Détail du bien</span>
+    </div>
+
+    <div class="contenu-principal">
+        
+        <div class="images-section">
+            <img id="main-img" src="" class="image-grande" alt="Vue principale du bien">
+            
+            <div class="images-petites">
+                <img id="thumb1" src="" onmouseover="changerImage(this.src)" alt="Miniature 1">
+                <img id="thumb2" src="" onmouseover="changerImage(this.src)" alt="Miniature 2">
+                <img id="thumb3" src="" onmouseover="changerImage(this.src)" alt="Miniature 3">
+            </div>
+        </div>
+
+        <div class="infos-section">
+            
+            <div class="en-tete">
+                <div>
+                    <h1 id="prop-title" style="display: inline-block; margin-right: 10px;"></h1>
+                    <span id="prop-transaction" class="badge-transaction"></span>
+                </div>
+                <div id="prop-etat"></div>
+            </div>
+            
+            <h2 id="prop-price-wrapper">
+                <img src="NOVA-ESTATE-IMAGES/ÉLÉMENTS-STATIQUES/icons/icon-tag.svg" class="icon-price" alt="Prix">
+                <span id="prop-price"></span>
+            </h2>
+
+            <div class="contact-agent">
+                <p>
+                    <img src="NOVA-ESTATE-IMAGES/ÉLÉMENTS-STATIQUES/icons/icon-key.svg" class="icon-agent" alt="Agent">
+                    <strong>Agent responsable :</strong> <span id="seller-name"></span>
+                </p>
+                <p>
+                    <img src="NOVA-ESTATE-IMAGES/ÉLÉMENTS-STATIQUES/icons/icon-phone.svg" class="icon-agent" alt="Téléphone">
+                    <strong>Téléphone :</strong> <span id="seller-phone"></span>
+                </p>
+                <p>
+                    <img src="NOVA-ESTATE-IMAGES/ÉLÉMENTS-STATIQUES/icons/icon-email.svg" class="icon-agent" alt="Email">
+                    <strong>Email :</strong> <span id="seller-email"></span>
+                </p>
+            </div>
+
+            <h3>Description détaillée :</h3>
+            <p id="prop-desc"></p>
+
+            <h3>Caractéristiques et Détails Techniques :</h3>
+            <ul class="details-techniques">
+                <li>
+                    <img src="NOVA-ESTATE-IMAGES/ÉLÉMENTS-STATIQUES/icons/icon-area.svg" class="icon-detail" alt="Surface">
+                    <div><strong>Surface :</strong> <span id="prop-surface"></span></div>
+                </li>
+                <li>
+                    <img src="NOVA-ESTATE-IMAGES/ÉLÉMENTS-STATIQUES/icons/icon-bed.svg" class="icon-detail" alt="Pièces">
+                    <div><strong>Pièces :</strong> <span id="prop-pieces"></span></div>
+                </li>
+                <li>
+                    <img src="NOVA-ESTATE-IMAGES/ÉLÉMENTS-STATIQUES/icons/icon-building.svg" class="icon-detail" alt="Étage">
+                    <div><strong>Étage :</strong> <span id="prop-etage"></span></div>
+                </li>
+                <li>
+                    <img src="NOVA-ESTATE-IMAGES/ÉLÉMENTS-STATIQUES/icons/icon-calendar.svg" class="icon-detail" alt="Année">
+                    <div><strong>Année de construction :</strong> <span id="prop-annee"></span></div>
+                </li>
+            </ul>
+
+            <h3>Équipements supplémentaires :</h3>
+            <ul id="prop-equipements" class="liste-equipements"></ul>
+
+            <h3>
+                <img src="NOVA-ESTATE-IMAGES/ÉLÉMENTS-STATIQUES/icons/icon-map-pin.svg" class="icon-section" alt="Localisation">
+                Localisation complète :
+            </h3>
+            <p id="prop-localisation" class="localisation-texte"></p>
+            
+            <div class="map-container" style="margin-bottom: 25px; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                <iframe id="map-iframe" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <h3>
+                <img src="NOVA-ESTATE-IMAGES/ÉLÉMENTS-STATIQUES/icons/icon-email.svg" class="icon-section" alt="Contact">
+                Contacter l'agent pour ce bien :
+            </h3>
+            <form class="formulaire-contact" id="contact-form">
+                <div class="form-row">
+                    <input type="text" id="nom" placeholder="Nom" required>
+                    <input type="text" id="prenom" placeholder="Prénom" required>
+                </div>
+                <div class="form-row">
+                    <input type="email" id="email" placeholder="Adresse e-mail" required>
+                    <input type="tel" id="telephone" placeholder="Téléphone" required>
+                </div>
+                <select id="service" required>
+                    <option value="">Sélectionnez le service concerné</option>
+                    <option value="visite">Demande de visite</option>
+                    <option value="info">Demande d'informations</option>
+                    <option value="achat">Proposition d'achat</option>
+                </select>
+                <textarea id="message" rows="4" placeholder="Votre message" required></textarea>
+                
+                <button type="button" class="btn-acheter" onclick="contacterAgent()">
+                    <img src="NOVA-ESTATE-IMAGES/ÉLÉMENTS-STATIQUES/icons/icon-email.svg" class="icon-btn" alt="">
+                    Contacter l'agent
+                </button>
+            </form>
+
+        </div>
+    </div>
+
+    <div class="section-similaires">
+        <h3>
+            <img src="NOVA-ESTATE-IMAGES/ÉLÉMENTS-STATIQUES/icons/icon-search.svg" class="icon-section" alt="Recherche">
+            Biens similaires recommandés
+        </h3>
+        <div class="cartes-similaires" id="similaires-container"></div>
+    </div>
+
+    <script src="bienIM.js"></script>
+</body>
+</html>
